@@ -1,0 +1,128 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+section{
+    min-height: 100vh;
+}
+
+a{
+    color: #fff;
+    transition: 0.3s;
+}
+a:hover{
+    opacity: 0.7;
+}
+
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    border: 4px solid #ffffff;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #3C9C81;
+    height: 8vh;
+    position: sticky;
+    top:0;
+    
+}
+nav h1{
+    float: left;
+}
+.nav-list{
+    display: flex;
+}
+.nav-list li{
+    letter-spacing: 5px;
+    margin-left: 32px;
+}
+.checkbtn{
+    font-size: 24px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media(max-width:960px){
+    .checkbtn{
+        display: block;
+    }
+    .nav-list{
+        display: none;
+        position: absolute;
+        width: 50vw;
+        height: 92vh;
+        background: #3c9c81c7;
+        ;
+        top: 8vh;
+        text-align: center;
+        right: -100%;
+        flex-direction: column;
+        transition: all ,5s;
+        
+
+    }
+    .nav-list li{
+        
+        margin: 50px 10px;
+        line-height: 30px;
+    }
+    .nav-list li a{
+        font-size: 20px;
+    }
+    #check:checked ~ ul{
+        right: 0;
+        display: block;
+    }
+    
+}
+
+/* conteiner */
+
+ h2{
+    font-size: 80px;
+    color: #42DA54;
+    padding-top: 80px;
+    text-align: center
+}
+
+img{
+    max-width: 100%;
+}
+.container{
+    background: url(imagens/slider/slide1.jpg)no-repeat center center;
+    background-size: cover;
+    height: 60vh;
+
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.flex > div{
+    flex: 1 1 200px;
+    margin: 10px ;
+    border: 4px solid #23232e;
+}
